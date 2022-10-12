@@ -26,8 +26,8 @@ jobs:
 
     - name: Deploy
       if: success()
-      uses: JamesIves/github-pages-deploy-action@releases/v3
+      uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: deploy_dist/PipelineAngular
+        publish_dir: dist/angular-github-actions
+        enable_jekyll: true
